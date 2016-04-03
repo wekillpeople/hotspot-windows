@@ -24,13 +24,11 @@ void __stdcall wlan_callback(PWLAN_NOTIFICATION_DATA pNotifData, PVOID pContext)
 
 	if (pNotifData->NotificationCode == wlan_hosted_network_state_change)
 	{
-		/* A change in state to idle or unavailable is a critical failure */
 
 		PWLAN_HOSTED_NETWORK_STATE_CHANGE pStateChange = (PWLAN_HOSTED_NETWORK_STATE_CHANGE)(pNotifData->pData);
 		if (pStateChange->NewState == wlan_hosted_network_idle || pStateChange->NewState == wlan_hosted_network_unavailable)
 		{
-			//emit hostedNetwork->hostedNetworkMessage("The wireless hosted network has stopped unexpectedly.", HOSTED_NETWORK_STOPPED);
-			//std::cout << "hata amk " << std::endl;
+			printf("err\n");
 		}
 	}
 	else if (pNotifData->NotificationCode == wlan_hosted_network_peer_state_change)
