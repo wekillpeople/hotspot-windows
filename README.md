@@ -1,5 +1,5 @@
 # hotspot-windows
-Turn your Windows PC into a Wi-Fi Hotspot with C!
+Turn your Windows PC into a WiFi Hotspot with C!
 
 # tested
 Windows 7, Windows 10 x64 and x86
